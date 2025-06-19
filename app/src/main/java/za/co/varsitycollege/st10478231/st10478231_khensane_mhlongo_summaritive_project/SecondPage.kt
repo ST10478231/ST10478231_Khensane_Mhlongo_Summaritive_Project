@@ -19,36 +19,35 @@ class SecondPage : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val txeInputSongTitle = intent.getStringArrayExtra("txeInputSongTitle")
-        val txeInputArtists = intent.getStringArrayExtra("txeInputArtists")
-        val txeInputRatings = intent.getStringArrayExtra("txeInputRatings")
-        val txeInputComments = intent.getStringArrayExtra("txeInputComments")
-        val btnView = findViewById<Button>(R.id.btnView)
+        val txeInputSongTitle = intent.getStringArrayExtra("txeInputSongTitle")//Getting the information from the first screen
+        val txeInputArtists = intent.getStringArrayExtra("txeInputArtists")//Getting the information from the first screen
+        val txeInputRatings = intent.getStringArrayExtra("txeInputRatings")//Getting the information from the first screen
+        val txeInputComments = intent.getStringArrayExtra("txeInputComments")//Getting the information from the first screen
+        val btnView = findViewById<Button>(R.id.btnView) //Declarations that follow
         val txeShowcasePlaylist = findViewById<TextView>(R.id.txeShowcasePlaylist)
         val btnBack = findViewById<Button>(R.id.btnBack)
         val btnExit2 = findViewById<Button>(R.id.btnExit2)
 
-
         btnView.setOnClickListener {
-            if (txeInputSongTitle != null && txeInputArtists != null && txeInputRatings != null && txeInputComments != null) {
+            if (txeInputSongTitle != null && txeInputArtists != null && txeInputRatings != null && txeInputComments != null) { //this is to say if there is empty arrays then do the following
                 val builder = StringBuilder()
                 val count = txeInputSongTitle.size
-                for (i in 0 until count) {
-                    builder.append("Song Title: ${txeInputSongTitle[i]}\n")
-                    builder.append("Artist: ${txeInputSongTitle.getOrNull(i) ?: ""}\n")
-                    builder.append("Rating : ${txeInputSongTitle.getOrNull(i) ?: ""}\n")
-                    builder.append("Comment: ${txeInputSongTitle.getOrNull(i) ?: ""}\n\n")
+                for (i in 0 until count) { //will loop through the users answers and display it
+                    builder.append("Song Title: ${txeInputSongTitle[i]}\n")//Show the users song title input
+                    builder.append("Artist: ${txeInputArtists.getOrNull(i) ?: ""}\n") //Shows the users input artist
+                    builder.append("Rating : ${txeInputRatings.getOrNull(i) ?: ""}\n") //Shows the users input
+                    builder.append("Comment: ${txeInputComments.getOrNull(i) ?: ""}\n\n")
                 }
                 txeShowcasePlaylist.text = builder.toString()
             }else {
-                txeShowcasePlaylist.text = "There was no information provided."
+                txeShowcasePlaylist.text = "There was no information provided." // Error that will show if the user did not enter any information
             }
             btnBack.setOnClickListener {
                 val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
+                startActivity(intent) //Goes back to the first page
             }
             btnExit2.setOnClickListener {
-                finishAffinity()
+                finishAffinity()//Exits the app
             }
         }
     }
