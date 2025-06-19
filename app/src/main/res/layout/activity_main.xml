@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/_3852988"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnPlaylist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:text="Add to playlist"
+        android:textSize="18dp"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="14dp" />
+
+    <TextView
+        android:id="@+id/txeErrors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/txeSongTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter the song tile:"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/editInputSongTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter song title"
+        android:inputType="text"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/txeArtist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter the artists name:"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/editInputArtist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter artists name"
+        android:inputType="text"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/txeRating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="On a scale form 1 - 5, how would you rate this song:"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/editInputRating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Use only numbers (1 - 5)"
+        android:inputType="text"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/txeComments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Comments about this song:"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/editInputComments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter your comment"
+        android:inputType="text"
+        android:visibility="gone" />
+
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="500dp"
+        android:backgroundTint="@color/black"
+        android:text="Next"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:text="Exit App"
+        android:textSize="18dp" />
+</LinearLayout>

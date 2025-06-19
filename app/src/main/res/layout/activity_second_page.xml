@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wp11842526"
+    android:orientation="vertical"
+    tools:context=".SecondPage">
+
+    <Button
+        android:id="@+id/btnView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:text="View Playlist"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="166dp" />
+
+    <TextView
+        android:id="@+id/txeShowcasePlaylist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:layout_editor_absoluteX="170dp"
+        tools:layout_editor_absoluteY="50dp" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="500dp"
+        android:backgroundTint="@color/white"
+        android:text="Back"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="185dp"
+        tools:layout_editor_absoluteY="82dp" />
+
+    <Button
+        android:id="@+id/btnExit2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:text="Exit"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="190dp" />
+
+</LinearLayout>
